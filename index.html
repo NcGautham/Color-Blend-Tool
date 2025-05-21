@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title> Gradient Generator </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Blend Tool</title>
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
-<body id="gradient">
-   <h1>Color Blend Tool</h1>
-   <input class=color1 type="color" name="color1" value="#8E7AB5">
-   <input class=color2 type="color" name="color2" value="#EEA5A6">
-   <h2>Current CSS Background</h2>
-   <h3></h3>
-   <script type="text/javascript" src="script.js"></script>
-    <footer style="text-align: center;">
-    <br>
-    
-           <h3> Copyright © 2023 NC Inc. All rights reserved </h3>
+<body class="min-h-screen bg-gradient-to-r from-[#8E7AB5] to-[#EEA5A6] font-['Poppins'] transition-all duration-500">
+	<div class="container mx-auto px-4 py-16">
+		<div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-xl">
+			<h1 class="text-4xl md:text-5xl font-bold text-white mb-8 opacity-0 animate-fade-in">Color Blend Tool</h1>
+			
+			<div class="space-y-6">
+				<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+					<div class="color-picker-wrapper">
+						<input class="color1 w-24 h-24 rounded-lg cursor-pointer transition-transform hover:scale-105" type="color" name="color1" value="#8E7AB5">
+					</div>
+					<div class="color-picker-wrapper">
+						<input class="color2 w-24 h-24 rounded-lg cursor-pointer transition-transform hover:scale-105" type="color" name="color2" value="#EEA5A6">
+					</div>
+				</div>
+
+				<div class="bg-white/20 rounded-lg p-4 mt-8">
+					<h2 class="text-lg font-medium text-white mb-2">Current CSS Background</h2>
+					<h3 class="text-sm font-mono text-white/80 break-all"></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="fixed bottom-0 w-full py-4 bg-black/10 backdrop-blur-sm">
+		<p class="text-center text-white/80 text-sm">Copyright © 2024 NC Inc. All rights reserved</p>
+	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>
